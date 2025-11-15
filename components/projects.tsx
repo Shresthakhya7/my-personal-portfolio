@@ -3,28 +3,41 @@ import { Github, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with React, Node.js, and Stripe integration.',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: '/ecommerce-platform-dashboard.jpg',
-      github: '#',
-      live: '#',
+      title: 'Ecommerce Beverage Website',
+      description: 'A simple project of an ecommerce platform where users can place orders and buy items.',
+      tags: ['HTML', 'CSS', 'JS'],
+      image: '/ecom.png',
+      github: 'https://github.com/Shresthakhya7/project',
+      live: 'https://Shresthakhya7.github.io/project',
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management application with real-time updates using WebSockets.',
-      tags: ['Next.js', 'TypeScript', 'WebSocket', 'MongoDB'],
-      image: '/task-management-app-interface.jpg',
-      github: '#',
-      live: '#',
+      title: 'ToDo List App',
+      description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
+      tags: ['React', 'JavaScript', 'HTML', 'CSS'],
+      image: '/todo.png',
+      github: 'https://github.com/Shresthakhya7/todolist',
+      live: 'https://Shresthakhya7.github.io/todolist',
     },
     {
-      title: 'AI Chat Dashboard',
-      description: 'Modern dashboard for managing AI-powered chatbot conversations and analytics.',
-      tags: ['React', 'TypeScript', 'OpenAI API', 'Chart.js'],
-      image: '/ai-chat-dashboard-analytics.jpg',
-      github: '#',
-      live: '#',
+      title: 'Movie Recommendation System',
+      description: 'An academic project developed using collaborative filtering with cosine similarity and Pearson correlation coefficient to recommend movies to users.',
+      tags: ['HTML', 'CSS', 'JS', 'Bootstraps', 'Python', 'Django'],
+      image: '/recommend.png',
+      github: 'https://github.com/Shresthakhya7/movie-recommendation-system',
+    },
+    {
+      title: 'Movie Projects',
+      description: 'Movie Projects was developed using Python with the Django framework. This project is a basic implementation of CRUD operations.',
+      tags: ['HTML', 'CSS', 'JS', 'Python', 'Django'],
+      image: '/movie.png',
+      github: 'https://github.com/Shresthakhya7/python-django-project',
+    },
+    {
+      title: 'Blog Management Application',
+      description: 'Blog Management Application is a project developed using Django Rest Framework and intgerated with Frontend application React Js.',
+      tags: ['React', 'Python', 'Django', 'Django REST Frameork'],
+      image: '/blog.png',
+      github: 'https://github.com/Shresthakhya7/API/tree/master',
     },
   ];
 
@@ -49,7 +62,7 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
+                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
                   <a
                     href={project.github}
                     className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
@@ -57,13 +70,15 @@ export default function Projects() {
                   >
                     <Github size={20} />
                   </a>
-                  <a
-                    href={project.live}
-                    className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
-                    aria-label="Live Demo"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
+                      aria-label="Live Demo"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
 

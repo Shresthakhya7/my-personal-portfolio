@@ -6,15 +6,15 @@ export default function Skills() {
     },
     {
       category: 'Backend',
-      skills: ['Node.js', 'Express', 'Python', 'Django', 'Django REST Framework', 'REST APIs', 'GraphQL'],
+      skills: ['Python', 'Django', 'Django REST Framework', 'REST APIs', 'GraphQL'],
     },
     {
       category: 'Tools & Platforms',
-      skills: ['Git', 'GitHub', 'Postman', 'Docker', 'VS Code'],
+      skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'Docker', 'Azure'],
     },
     {
       category: 'Soft Skills',
-      skills: ['Communication', 'Problem Solving', 'Collaboration And Teamwork', 'Time Management', 'Attention To Detail'],
+      skills: ['Communication', 'Problem Solving', 'Time Management', 'Attention To Detail', 'Collaboration And Teamwork'],
     },
   ];
 

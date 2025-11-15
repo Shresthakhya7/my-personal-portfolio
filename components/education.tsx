@@ -1,16 +1,16 @@
 export default function Education() {
   const education = [
     {
-      school: 'University of Technology',
-      degree: 'Bachelor of Science in Computer Science',
-      year: '2018 - 2022',
-      description: 'Focused on web development, algorithms, and software engineering principles.',
+      school: 'Bhaktaput Multiple Campus',
+      degree: 'Bsc. CSIT',
+      year: 'Passed Year: 2023',
+      description: 'Percentage: 80.90%',
     },
     {
-      school: 'Advanced Web Development Bootcamp',
-      degree: 'Full Stack Web Development Certificate',
-      year: '2022 - 2023',
-      description: 'Intensive training in modern web technologies and best practices.',
+      school: 'Khwopa Secondary School',
+      degree: '10+2',
+      year: 'Passed year: 2019',
+      description: 'CGPA: 3.24',
     },
   ];
 
@@ -19,7 +19,7 @@ export default function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Education</h2>
-          <p className="text-lg text-muted-foreground">My academic background and certifications</p>
+          <p className="text-lg text-muted-foreground">My academic background</p>
         </div>
 
         <div className="space-y-8">
@@ -35,7 +35,7 @@ export default function Education() {
                   </h3>
                   <p className="text-lg text-foreground mt-2">{edu.school}</p>
                 </div>
-                <span className="inline-block px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-semibold whitespace-nowrap">
+                <span className="inline-block px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-semibold whitespace-nowrap self-start">
                   {edu.year}
                 </span>
               </div>
