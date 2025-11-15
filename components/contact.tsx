@@ -31,10 +31,16 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
   } = useForm<ContactFormType>({
     resolver: zodResolver(contactSchema),
   });
+  const watchAllFields = watch();
+
+  const allFieldsFilled = Object.values(watchAllFields).every(
+    (val) => val && val.toString().trim() !== ""
+  );
 
   const onSubmit = async (data: ContactFormType) => {
     if (!verified) {
@@ -153,12 +159,13 @@ export default function Contact() {
                 {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
               </div>
 
-              {/* reCAPTCHA */}
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.NEXT_PUBLIC_ReCAPTCHA_SITE_KEY!}
-                onChange={() => setVerified(true)}
-              />
+              {allFieldsFilled && (
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_ReCAPTCHA_SITE_KEY!}
+                  onChange={() => setVerified(true)}
+                />
+              )}
 
               <button
                 type="submit"
