@@ -4,18 +4,6 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-          {/* Right Image Placeholder */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl blur-2xl opacity-20"></div>
-            <div className="relative bg-primary/30 border border-cyan-500/20 rounded-2xl aspect-square flex items-center justify-center">
-              <img
-                src="/shrestha.JPG"
-                alt="About me placeholder"
-                className="rounded-2xl w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
           {/* Left Content */}
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">About Me</h2>
@@ -30,7 +18,17 @@ export default function About() {
             </p>
           </div>
 
-
+          {/* Right Image Placeholder */}
+          <div className="relative">
+            <div className="absolute inset-0 bg-linear-to-r from-cyan-500 to-blue-500 rounded-2xl blur-2xl opacity-20"></div>
+            <div className="relative bg-primary/30 border border-cyan-500/20 rounded-2xl aspect-square flex items-center justify-center">
+              <img
+                src="/shrestha.JPG"
+                alt="About me placeholder"
+                className="rounded-2xl w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

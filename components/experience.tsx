@@ -8,7 +8,7 @@ export default function Experience() {
     },
     {
       title: 'Python Developer Intern',
-      company: 'Quickfox Consulting.',
+      company: 'Quickfox Consulting',
       year: '27th Sep 2024 - 27th Dec 2024',
       description: 'Contributed to the QuickRPA project by building a React.js download feature with Django-based role control, integrating it smoothly into existing workflows',
     },

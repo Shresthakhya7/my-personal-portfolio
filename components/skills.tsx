@@ -6,7 +6,7 @@ export default function Skills() {
     },
     {
       category: 'Backend',
-      skills: ['Python', 'Django', 'Django REST Framework', 'REST APIs', 'GraphQL'],
+      skills: ['Python', 'Django', 'REST APIs', 'GraphQL', 'Django REST Framework'],
     },
     {
       category: 'Tools & Platforms',
