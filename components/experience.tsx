@@ -1,23 +1,24 @@
 export default function Experience() {
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovations Inc.',
-      year: '2023 - Present',
-      description: 'Leading frontend development with React and Next.js. Architecting scalable component systems and improving performance.',
+      title: 'Frontend Developer Intern',
+      company: 'Cognix Insights',
+      year: '22nd Jun 2025 - Present',
+      description: 'Building scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.',
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      year: '2021 - 2023',
-      description: 'Developed full-stack web applications using React, Node.js, and PostgreSQL. Collaborated with cross-functional teams.',
+      title: 'Python Developer Intern',
+      company: 'Quickfox Consulting.',
+      year: '27th Sep 2024 - 27th Dec 2024',
+      description: 'Contributed to the QuickRPA project by building a React.js download feature with Django-based role control, integrating it smoothly into existing workflows',
     },
     {
-      title: 'Junior Frontend Developer',
-      company: 'Creative Web Studio',
-      year: '2020 - 2021',
-      description: 'Built responsive user interfaces and fixed bugs. Learned best practices in web development and Git collaboration.',
+      title: 'Frontend Developer Intern',
+      company: 'Beetech Solutions Pvt. Ltd.',
+      year: '16th Jun 2024 - 16th Sep 2024',
+      description: 'Built responsive web interfaces and customized WordPress sites, contributing to high-quality project deliveries.',
     },
+
   ];
 
   return (
@@ -25,7 +26,7 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Experience</h2>
-          <p className="text-lg text-muted-foreground">My professional journey and achievements</p>
+          <p className="text-lg text-muted-foreground">My professional journey</p>
         </div>
 
         <div className="space-y-8">
@@ -34,7 +35,7 @@ export default function Experience() {
               key={index}
               className="group relative p-6 md:p-8 rounded-xl bg-background border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-500 transform group-hover:w-2 transition-all duration-300"></div>
+              <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-cyan-500 to-blue-500 transform group-hover:w-2 transition-all duration-300"></div>
 
               <div className="pl-0 md:pl-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">

@@ -1,6 +1,12 @@
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+"use client"
+
+import { Github, Linkedin, Twitter, Mail, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
+  const handleOpenPDF = () => {
+    window.open('./resume.pdf', '_blank');
+  }
+
   return (
     <footer className="bg-primary/10 border-t border-primary/10 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -47,14 +53,15 @@ export default function Footer() {
             <h4 className="font-bold text-foreground mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-cyan-400 transition-colors">
+                <a href="https://github.com/Shresthakhya7"
+                  className="hover:text-cyan-400 transition-colors">
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition-colors">
+                <button onClick={handleOpenPDF} className="hover:text-cyan-400 transition-colors cursor-pointer">
                   Resume
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -64,32 +71,26 @@ export default function Footer() {
             <h4 className="font-bold text-foreground mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/30 transition-colors"
-                aria-label="GitHub"
-              >
-                <Github size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/shreejan-khya-shrestha-30016a2a9/"
                 className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/30 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/shreejan.khya7"
+                className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/30 transition-colors"
+                aria-label="GitHub"
+              >
+                <Facebook size={18} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/shrestha_khya7/"
                 className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/30 transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/30 transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={18} />
+                <Instagram size={18} />
               </a>
             </div>
           </div>
