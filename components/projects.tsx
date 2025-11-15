@@ -19,6 +19,14 @@ export default function Projects() {
       live: 'https://Shresthakhya7.github.io/todolist',
     },
     {
+      title: 'Quote Generator',
+      description: 'An app to generate quote and have a feature to change themes and font size increment.',
+      tags: ['React', 'JavaScript', 'HTML', 'CSS'],
+      image: '/quote.png',
+      github: 'https://github.com/Shresthakhya7/Quote-Generator',
+      live: 'https://qgenerate.netlify.app/',
+    },
+    {
       title: 'Movie Recommendation System',
       description: 'An academic project developed using collaborative filtering with cosine similarity and Pearson correlation coefficient to recommend movies to users.',
       tags: ['HTML', 'CSS', 'JS', 'Bootstraps', 'Python', 'Django'],
@@ -62,7 +70,15 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
+                <div
+                  className="
+                  absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent 
+                  opacity-100 md:opacity-0 
+                  md:group-hover:opacity-100 
+                  transition-opacity duration-300 
+                  flex items-end justify-center pb-4 gap-4
+                  "
+                >
                   <a
                     href={project.github}
                     className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"

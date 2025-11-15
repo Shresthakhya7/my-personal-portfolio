@@ -1,41 +1,82 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { useRef, useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import { toast } from "sonner";
+
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  number: z
+    .string()
+    .min(8, "Number must be at least 8 digits")
+    .max(15, "Number too long")
+    .regex(/^[0-9]+$/, "Only digits allowed"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormType = z.infer<typeof contactSchema>;
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+  const [verified, setVerified] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormType>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const onSubmit = async (data: ContactFormType) => {
+    if (!verified) {
+      toast.error("Please verify that you are human!");
+      return;
+    }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+    const loadingToast = toast.loading("Sending message...");
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE!,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE!,
+        data,
+        process.env.NEXT_PUBLIC_EMAIL_KEY!
+      );
+
+      toast.dismiss(loadingToast);
+      toast.success("Message sent successfully!");
+
+      reset();
+      recaptchaRef.current?.reset();
+      setVerified(false);
+    } catch (error) {
+      toast.dismiss(loadingToast);
+      toast.error("Failed to send message. Please try again.");
+    }
   };
 
   return (
     <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
+
+        {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground">Let's discuss your next project</p>
         </div>
 
+        {/* Contact Info Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Contact Info Cards */}
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
+          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
             <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
               <Mail className="text-cyan-400" size={24} />
             </div>
@@ -43,7 +84,7 @@ export default function Contact() {
             <p className="text-muted-foreground">shresthakhya7@gmail.com</p>
           </div>
 
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
+          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
             <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
               <Phone className="text-cyan-400" size={24} />
             </div>
@@ -51,7 +92,7 @@ export default function Contact() {
             <p className="text-muted-foreground">+977 9866316333</p>
           </div>
 
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
+          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
             <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
               <MapPin className="text-cyan-400" size={24} />
             </div>
@@ -63,64 +104,72 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="max-w-2xl mx-auto">
           <div className="p-8 md:p-12 rounded-xl bg-primary/10 border border-cyan-500/20">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+
+              {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
-                </label>
+                <label className="block text-sm font-medium mb-2">Name</label>
                 <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  {...register("name")}
                   placeholder="Your name"
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20 focus:border-cyan-500 focus:outline-none transition-colors placeholder-muted-foreground"
-                  required
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
                 />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
               </div>
 
+              {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
+                <label className="block text-sm font-medium mb-2">Email</label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  {...register("email")}
                   placeholder="Your email"
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20 focus:border-cyan-500 focus:outline-none transition-colors placeholder-muted-foreground"
-                  required
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
                 />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
               </div>
 
+              {/* Number */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Your message"
-                  rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20 focus:border-cyan-500 focus:outline-none transition-colors resize-none placeholder-muted-foreground"
-                  required
-                ></textarea>
+                <label className="block text-sm font-medium mb-2">Phone Number</label>
+                <input
+                  type="tel"
+                  {...register("number")}
+                  placeholder="Your phone number"
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
+                />
+                {errors.number && <p className="text-red-500 text-sm">{errors.number.message}</p>}
               </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  rows={6}
+                  {...register("message")}
+                  placeholder="Your message"
+                  className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20 resize-none"
+                />
+                {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+              </div>
+
+              {/* reCAPTCHA */}
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={process.env.NEXT_PUBLIC_ReCAPTCHA_SITE_KEY!}
+                onChange={() => setVerified(true)}
+              />
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 transition-colors duration-300"
+                className="w-full px-6 py-3 bg-cyan-500 text-black font-semibold rounded-lg hover:bg-cyan-400 cursor-pointer"
               >
                 Send Message
               </button>
             </form>
           </div>
         </div>
+
       </div>
     </section>
   );
