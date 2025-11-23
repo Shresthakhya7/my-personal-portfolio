@@ -12,7 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("Please enter valid email address"),
   number: z
     .string()
     .min(8, "Number must be at least 8 digits")
@@ -120,7 +120,7 @@ export default function Contact() {
                   placeholder="Your name"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
                 />
-                {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                {errors.name && <p className="text-red-500 text-sm pt-2">{errors.name.message}</p>}
               </div>
 
               {/* Email */}
@@ -132,7 +132,7 @@ export default function Contact() {
                   placeholder="Your email"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
                 />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                {errors.email && <p className="text-red-500 text-sm pt-2">{errors.email.message}</p>}
               </div>
 
               {/* Number */}
@@ -144,7 +144,7 @@ export default function Contact() {
                   placeholder="Your phone number"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20"
                 />
-                {errors.number && <p className="text-red-500 text-sm">{errors.number.message}</p>}
+                {errors.number && <p className="text-red-500 text-sm pt-2">{errors.number.message}</p>}
               </div>
 
               {/* Message */}
@@ -156,7 +156,7 @@ export default function Contact() {
                   placeholder="Your message"
                   className="w-full px-4 py-3 rounded-lg bg-background border border-cyan-500/20 resize-none"
                 />
-                {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+                {errors.message && <p className="text-red-500 text-sm pt-2">{errors.message.message}</p>}
               </div>
 
               {allFieldsFilled && (

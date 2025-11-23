@@ -328,19 +328,22 @@ function Experience() {
         {
             title: 'Frontend Developer Intern',
             company: 'Cognix Insights',
-            year: '22nd Jun 2025 - Present',
-            description: 'Building scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.'
+            year: '22nd Jun 2025 - 21st Nov 2025',
+            projects: 'CI - NAASA, CI - KIEC',
+            description: 'Build scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.'
         },
         {
             title: 'Python Developer Intern',
             company: 'Quickfox Consulting',
             year: '27th Sep 2024 - 27th Dec 2024',
+            projects: 'QuickRPA',
             description: 'Contributed to the QuickRPA project by building a React.js download feature with Django-based role control, integrating it smoothly into existing workflows'
         },
         {
             title: 'Frontend Developer Intern',
             company: 'Beetech Solutions Pvt. Ltd.',
             year: '16th Jun 2024 - 16th Sep 2024',
+            projects: 'VoCare',
             description: 'Built responsive web interfaces and customized WordPress sites, contributing to high-quality project deliveries.'
         }
     ];
@@ -358,7 +361,7 @@ function Experience() {
                             children: "Experience"
                         }, void 0, false, {
                             fileName: "[project]/components/experience.tsx",
-                            lineNumber: 28,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -366,13 +369,13 @@ function Experience() {
                             children: "My professional journey"
                         }, void 0, false, {
                             fileName: "[project]/components/experience.tsx",
-                            lineNumber: 29,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/experience.tsx",
-                    lineNumber: 27,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -384,7 +387,7 @@ function Experience() {
                                     className: "absolute top-0 left-0 w-1 h-full bg-linear-to-b from-cyan-500 to-blue-500 transform group-hover:w-2 transition-all duration-300"
                                 }, void 0, false, {
                                     fileName: "[project]/components/experience.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -400,7 +403,7 @@ function Experience() {
                                                             children: exp.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/experience.tsx",
-                                                            lineNumber: 43,
+                                                            lineNumber: 46,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -408,13 +411,13 @@ function Experience() {
                                                             children: exp.company
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/experience.tsx",
-                                                            lineNumber: 46,
+                                                            lineNumber: 49,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/experience.tsx",
-                                                    lineNumber: 42,
+                                                    lineNumber: 45,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -422,13 +425,24 @@ function Experience() {
                                                     children: exp.year
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/experience.tsx",
-                                                    lineNumber: 48,
+                                                    lineNumber: 51,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/experience.tsx",
-                                            lineNumber: 41,
+                                            lineNumber: 44,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-muted-foreground",
+                                            children: [
+                                                "Worked On: ",
+                                                exp.projects
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/experience.tsx",
+                                            lineNumber: 53,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -436,35 +450,35 @@ function Experience() {
                                             children: exp.description
                                         }, void 0, false, {
                                             fileName: "[project]/components/experience.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 54,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/experience.tsx",
-                                    lineNumber: 40,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/components/experience.tsx",
-                            lineNumber: 34,
+                            lineNumber: 37,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/experience.tsx",
-                    lineNumber: 32,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/experience.tsx",
-            lineNumber: 26,
+            lineNumber: 29,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/experience.tsx",
-        lineNumber: 25,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
@@ -483,18 +497,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 function Projects() {
     const projects = [
-        {
-            title: 'Ecommerce Beverage Website',
-            description: 'A simple project of an ecommerce platform where users can place orders and buy items.',
-            tags: [
-                'HTML',
-                'CSS',
-                'JS'
-            ],
-            image: '/ecom.png',
-            github: 'https://github.com/Shresthakhya7/project',
-            live: 'https://Shresthakhya7.github.io/project'
-        },
         {
             title: 'ToDo List App',
             description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
@@ -522,6 +524,30 @@ function Projects() {
             live: 'https://qgenerate.netlify.app/'
         },
         {
+            title: 'Ecommerce Beverage Website',
+            description: 'A simple project of an ecommerce platform where users can place orders and buy items.',
+            tags: [
+                'HTML',
+                'CSS',
+                'JS'
+            ],
+            image: '/ecom.png',
+            github: 'https://github.com/Shresthakhya7/project',
+            live: 'https://Shresthakhya7.github.io/project'
+        },
+        {
+            title: 'Blog Management Application',
+            description: 'Blog Management Application is a project developed using Django Rest Framework and intgerated with Frontend application React Js.',
+            tags: [
+                'React',
+                'Python',
+                'Django',
+                'Django REST Frameork'
+            ],
+            image: '/blog.png',
+            github: 'https://github.com/Shresthakhya7/API/tree/master'
+        },
+        {
             title: 'Movie Recommendation System',
             description: 'An academic project developed using collaborative filtering with cosine similarity and Pearson correlation coefficient to recommend movies to users.',
             tags: [
@@ -547,18 +573,6 @@ function Projects() {
             ],
             image: '/movie.png',
             github: 'https://github.com/Shresthakhya7/python-django-project'
-        },
-        {
-            title: 'Blog Management Application',
-            description: 'Blog Management Application is a project developed using Django Rest Framework and intgerated with Frontend application React Js.',
-            tags: [
-                'React',
-                'Python',
-                'Django',
-                'Django REST Frameork'
-            ],
-            image: '/blog.png',
-            github: 'https://github.com/Shresthakhya7/API/tree/master'
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {

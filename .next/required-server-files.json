@@ -99,7 +99,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Administrator\\Downloads\\code",
+    "outputFileTracingRoot": "E:\\shresthakhya\\personal-profile",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -289,11 +289,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "C:\\Users\\Administrator\\Downloads\\code"
+      "root": "E:\\shresthakhya\\personal-profile"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\Administrator\\Downloads\\code",
+  "appDir": "E:\\shresthakhya\\personal-profile",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
