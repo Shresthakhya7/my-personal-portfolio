@@ -3,19 +3,22 @@ export default function Experience() {
     {
       title: 'Frontend Developer Intern',
       company: 'Cognix Insights',
-      year: '22nd Jun 2025 - Present',
-      description: 'Building scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.',
+      year: '22nd Jun 2025 - 21st Nov 2025',
+      projects: 'CI - NAASA, CI - KIEC',
+      description: 'Build scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.',
     },
     {
       title: 'Python Developer Intern',
       company: 'Quickfox Consulting',
       year: '27th Sep 2024 - 27th Dec 2024',
+      projects: 'QuickRPA',
       description: 'Contributed to the QuickRPA project by building a React.js download feature with Django-based role control, integrating it smoothly into existing workflows',
     },
     {
       title: 'Frontend Developer Intern',
       company: 'Beetech Solutions Pvt. Ltd.',
       year: '16th Jun 2024 - 16th Sep 2024',
+      projects: 'VoCare',
       description: 'Built responsive web interfaces and customized WordPress sites, contributing to high-quality project deliveries.',
     },
 
@@ -47,6 +50,7 @@ export default function Experience() {
                   </div>
                   <span className="text-sm text-muted-foreground font-semibold">{exp.year}</span>
                 </div>
+                <p className="text-muted-foreground">Worked On: {exp.projects}</p>
                 <p className="text-muted-foreground">{exp.description}</p>
               </div>
             </div>

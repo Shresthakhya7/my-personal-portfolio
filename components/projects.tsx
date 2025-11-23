@@ -3,14 +3,6 @@ import { Github, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'Ecommerce Beverage Website',
-      description: 'A simple project of an ecommerce platform where users can place orders and buy items.',
-      tags: ['HTML', 'CSS', 'JS'],
-      image: '/ecom.png',
-      github: 'https://github.com/Shresthakhya7/project',
-      live: 'https://Shresthakhya7.github.io/project',
-    },
-    {
       title: 'ToDo List App',
       description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
       tags: ['React', 'JavaScript', 'HTML', 'CSS'],
@@ -27,6 +19,21 @@ export default function Projects() {
       live: 'https://qgenerate.netlify.app/',
     },
     {
+      title: 'Ecommerce Beverage Website',
+      description: 'A simple project of an ecommerce platform where users can place orders and buy items.',
+      tags: ['HTML', 'CSS', 'JS'],
+      image: '/ecom.png',
+      github: 'https://github.com/Shresthakhya7/project',
+      live: 'https://Shresthakhya7.github.io/project',
+    },
+    {
+      title: 'Blog Management Application',
+      description: 'Blog Management Application is a project developed using Django Rest Framework and intgerated with Frontend application React Js.',
+      tags: ['React', 'Python', 'Django', 'Django REST Frameork'],
+      image: '/blog.png',
+      github: 'https://github.com/Shresthakhya7/API/tree/master',
+    },
+    {
       title: 'Movie Recommendation System',
       description: 'An academic project developed using collaborative filtering with cosine similarity and Pearson correlation coefficient to recommend movies to users.',
       tags: ['HTML', 'CSS', 'JS', 'Bootstraps', 'Python', 'Django'],
@@ -39,13 +46,6 @@ export default function Projects() {
       tags: ['HTML', 'CSS', 'JS', 'Python', 'Django'],
       image: '/movie.png',
       github: 'https://github.com/Shresthakhya7/python-django-project',
-    },
-    {
-      title: 'Blog Management Application',
-      description: 'Blog Management Application is a project developed using Django Rest Framework and intgerated with Frontend application React Js.',
-      tags: ['React', 'Python', 'Django', 'Django REST Frameork'],
-      image: '/blog.png',
-      github: 'https://github.com/Shresthakhya7/API/tree/master',
     },
   ];
 
