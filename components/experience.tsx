@@ -1,6 +1,13 @@
 export default function Experience() {
   const experiences = [
     {
+      title: 'Junior Frontend Developer (Remote)',
+      company: 'Neputer Tech',
+      year: 'Dec 2025 - Present',
+      // projects: 'Medhey',
+      description: 'Built responsive and user-friendly web interfaces for project-based requirements.'
+    },
+    {
       title: 'Frontend Developer Intern',
       company: 'Cognix Insights',
       year: '22nd Jun 2025 - 21st Nov 2025',
@@ -50,7 +57,9 @@ export default function Experience() {
                   </div>
                   <span className="text-sm text-muted-foreground font-semibold">{exp.year}</span>
                 </div>
-                <p className="text-muted-foreground">Worked On: {exp.projects}</p>
+                {exp.projects && (
+                  <p className="text-muted-foreground">Worked On: {exp.projects}</p>
+                )}
                 <p className="text-muted-foreground">{exp.description}</p>
               </div>
             </div>
