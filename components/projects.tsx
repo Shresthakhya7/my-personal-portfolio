@@ -3,6 +3,12 @@ import { Github, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
+      title: 'Medhey App',
+      description: 'A Next.js-based eCommerce application with server-side rendering, responsive UI, and dynamic product navigation.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI'],
+      image: '/medhey.png',
+    },
+    {
       title: 'ToDo List App',
       description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
       tags: ['React', 'JavaScript', 'HTML', 'CSS'],
@@ -79,13 +85,15 @@ export default function Projects() {
                   flex items-end justify-center pb-4 gap-4
                   "
                 >
-                  <a
-                    href={project.github}
-                    className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
-                    aria-label="GitHub"
-                  >
-                    <Github size={20} />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
+                      aria-label="GitHub"
+                    >
+                      <Github size={20} />
+                    </a>
+                  )}
                   {project.live && (
                     <a
                       href={project.live}
