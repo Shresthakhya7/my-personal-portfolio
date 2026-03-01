@@ -2,12 +2,12 @@ import { Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
-    {
-      title: 'Medhey App',
-      description: 'A Next.js-based eCommerce application with server-side rendering, responsive UI, and dynamic product navigation.',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI'],
-      image: '/medhey.png',
-    },
+    // {
+    //   title: 'Medhey App',
+    //   description: 'A Next.js-based eCommerce application with server-side rendering, responsive UI, and dynamic product navigation.',
+    //   tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI'],
+    //   image: '/medhey.png',
+    // },
     {
       title: 'ToDo List App',
       description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
