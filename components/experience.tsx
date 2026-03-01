@@ -4,13 +4,13 @@ export default function Experience() {
       title: 'Junior Frontend Developer (Remote)',
       company: 'Neputer Tech',
       year: 'Dec 2025 - Present',
-      // projects: 'Medhey',
+      projects: 'Medhey',
       description: 'Built responsive and user-friendly web interfaces for project-based requirements.'
     },
     {
       title: 'Frontend Developer Intern',
       company: 'Cognix Insights',
-      year: '22nd Jun 2025 - 21st Nov 2025',
+      year: '22nd Jun 2025 - 23rd Nov 2025',
       projects: 'CI - NAASA, CI - KIEC',
       description: 'Build scalable Next.js + TypeScript applications with modern UI components, GraphQL integration, and dynamic user-focused features in collaboration with cross-functional teams.',
     },
