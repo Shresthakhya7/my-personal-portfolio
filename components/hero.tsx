@@ -5,56 +5,61 @@ import Typewriter from "typewriter-effect";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-10 sm:py-12 lg:py-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center py-20 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
-          <div className="text-center lg:text-left">
+          <div className="space-y-6 md:space-y-8">
             <div className="mb-3 sm:mb-4 lg:mb-6 inline-flex">
               <span className="p-3 sm:px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs sm:text-sm font-medium">
                 Welcome to my portfolio
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
-              Hi, I'm
-            </h1>
+            <div className="space-y-3 md:space-y-4">
 
-            <h2 className="mt-1 md:mt-2 text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
-              Shreejan Khya Shrestha
-            </h2>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                Hi, I'm
+              </h1>
 
-            <div className="mt-2 sm:mt-4 lg:mt-6 text-2xl sm:text-3xl lg:text-4xl font-bold flex items-center justify-center lg:justify-start gap-2 text-white">
-              <span>A</span>
-              <span className="text-cyan-300">
-                <Typewriter
-                  options={{
-                    strings: ['Frontend Developer', 'Web Developer', 'Python Developer'],
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 50,
-                    delay: 80,
-                  }}
-                />
-              </span>
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-cyan-500 to-indigo-500 bg-clip-text text-transparent">
+                Shreejan Khya Shrestha
+              </h2>
+
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold flex gap-2 text-white">
+                <span>A</span>
+                <span className="text-cyan-300">
+                  <Typewriter
+                    options={{
+                      strings: ['Frontend Developer', 'Web Developer', 'Python Developer'],
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 50,
+                      delay: 80,
+                    }}
+                  />
+                </span>
+              </div>
+
             </div>
 
-            <div className="mt-4 sm:mt-6 lg:mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="group px-8 py-3 bg-cyan-500 text-black font-semibold rounded-lg
-                hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center gap-2"
+                className="group px-2 sm:px-4 lg:px-8 py-2 sm:py-3 bg-cyan-500 text-black font-semibold rounded-lg
+            hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center gap-2"
               >
                 View My Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
+
               <a
                 href="#contact"
-                className="px-8 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg
-                hover:bg-cyan-500/10 transition-all duration-300 active:scale-95"
+                className="px-2 sm:px-4 lg:px-8 py-2 sm:py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg
+            hover:bg-cyan-500/10 transition-all duration-300 active:scale-95"
               >
                 Get In Touch
               </a>
@@ -86,7 +91,7 @@ export default function Hero() {
               <span
                 key={tech}
                 className="px-4 py-2 bg-cyan-500/5 border border-cyan-500/20 rounded-lg
-                text-sm text-cyan-300 hover:border-cyan-400/40 hover:bg-cyan-500/10 transition"
+            text-sm text-cyan-300 hover:border-cyan-400/40 hover:bg-cyan-500/10 transition"
               >
                 {tech}
               </span>

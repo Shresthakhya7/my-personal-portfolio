@@ -8,9 +8,9 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-primary/10 border-t border-primary/10 py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-primary/10 border-t border-primary/10 py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6 lg:mb-8">
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-foreground mb-4">Navigation</h4>
+            <h4 className="font-bold text-foreground mb-2 md:mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="#about" className="hover:text-cyan-400 transition-colors">
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-bold text-foreground mb-4">Resources</h4>
+            <h4 className="font-bold text-foreground mb-2 md:mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a href="https://github.com/Shresthakhya7"
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h4 className="font-bold text-foreground mb-4">Connect</h4>
+            <h4 className="font-bold text-foreground mb-2 md:mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/in/shreejan-khya-shrestha-30016a2a9/"
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-primary/10 pt-8">
+        <div className="border-t border-primary/10 pt-6 md:pt-8">
           <p className="text-center text-sm text-muted-foreground">
             © Shreejan Khya. All rights reserved.
           </p>

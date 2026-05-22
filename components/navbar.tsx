@@ -18,9 +18,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-primary/10">
+      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-gray-400 shadow-[0_0_10px_rgba(34,211,238,0.6)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex justify-between items-center h-16 md:h-20">
+          <div className="flex justify-between items-center h-16 md:h-18 lg:h-20">
             <div className="shrink-0">
               <a href="#" className="flex items-center gap-2 md:gap-3 group">
                 <img
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-muted-foreground hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  className="text-lg text-muted-foreground hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   {item.label}
                 </a>
