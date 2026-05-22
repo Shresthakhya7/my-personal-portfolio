@@ -56,10 +56,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="pt-20 lg:pt-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Featured Projects</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 md:mb-4">Featured Projects</h2>
           <p className="text-base md:text-lg text-muted-foreground">Showcase of my recent work and creations</p>
         </div>
 

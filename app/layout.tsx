@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Toaster } from 'sonner';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -38,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
+        <Navbar/>
         {children}
         <Toaster 
           position="top-right" 
@@ -46,6 +49,7 @@ export default function RootLayout({
           closeButton
         />
         <Analytics />
+        <Footer/>
       </body>
     </html>
   )

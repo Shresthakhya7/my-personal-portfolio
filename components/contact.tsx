@@ -76,7 +76,7 @@ export default function Contact() {
 
         {/* Title */}
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 md:mb-4">Get In Touch</h2>
           <p className="text-base md:text-lg text-muted-foreground">Let's discuss your next project</p>
         </div>
 

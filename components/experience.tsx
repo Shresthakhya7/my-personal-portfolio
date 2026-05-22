@@ -32,10 +32,10 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-primary/5 border-y border-primary/10">
+    <section id="experience" className="pt-20 lg:pt-24 px-4 sm:px-6 lg:px-8 bg-primary/5 border-y border-primary/10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Experience</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 md:mb-4">Experience</h2>
           <p className="text-base md:text-lg text-muted-foreground">My professional journey</p>
         </div>
 
