@@ -15,11 +15,11 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Education</h2>
-          <p className="text-lg text-muted-foreground">My academic background</p>
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Education</h2>
+          <p className="text-base md:text-lg text-muted-foreground">My academic background</p>
         </div>
 
         <div className="space-y-8">

@@ -19,11 +19,11 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-primary/5 border-y border-primary/10">
+    <section id="skills" className="py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-primary/5 border-y border-primary/10">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h2>
-          <p className="text-lg text-muted-foreground">Technologies I'm proficient in</p>
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Skills & Expertise</h2>
+          <p className="text-base md:text-lg text-muted-foreground">Technologies I'm proficient in</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
