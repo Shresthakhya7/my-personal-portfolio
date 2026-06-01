@@ -2,12 +2,14 @@ import { Github, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
-    // {
-    //   title: 'Medhey App',
-    //   description: 'A Next.js-based eCommerce application with server-side rendering, responsive UI, and dynamic product navigation.',
-    //   tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI'],
-    //   image: '/medhey.png',
-    // },
+    {
+      title: 'User Tasks Dashboard',
+      description: 'A modern Next.js + TypeScript dashboard for managing and visualizing user data with inline editing, validation, and real-time state management.',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI', 'Zustand', 'Tanstack Table'],
+      image: '/dashboard.png',
+      github: 'https://github.com/Shresthakhya7/tasks-dashboard',
+      live: 'https://user-tasks-dashboard.netlify.app/',
+    },
     {
       title: 'ToDo List App',
       description: 'A ToDo List App where users can add, manage, and order their tasks according to their necessity.',
@@ -63,7 +65,7 @@ export default function Projects() {
           <p className="text-base md:text-lg text-muted-foreground">Showcase of my recent work and creations</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -88,6 +90,8 @@ export default function Projects() {
                   {project.github && (
                     <a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
                       aria-label="GitHub"
                     >
@@ -97,6 +101,8 @@ export default function Projects() {
                   {project.live && (
                     <a
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-2 rounded-lg bg-cyan-500 text-black hover:bg-cyan-400 transition-colors"
                       aria-label="Live Demo"
                     >
@@ -107,7 +113,7 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 lg:p-6">
                 <h3 className="text-xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
                   {project.title}
                 </h3>

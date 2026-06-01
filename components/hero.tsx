@@ -34,7 +34,7 @@ export default function Hero() {
                 <span className="text-cyan-300">
                   <Typewriter
                     options={{
-                      strings: ['Frontend Developer', 'Web Developer', 'Python Developer'],
+                      strings: ['Frontend Developer', 'Web Developer'],
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 50,
@@ -50,7 +50,7 @@ export default function Hero() {
               <a
                 href="#projects"
                 className="group px-2 sm:px-4 lg:px-8 py-2 sm:py-3 bg-cyan-500 text-black font-semibold rounded-lg
-            hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center gap-2"
+                  hover:scale-[1.03] active:scale-95 transition-all duration-300 flex items-center gap-2"
               >
                 View My Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

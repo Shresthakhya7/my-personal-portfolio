@@ -4,7 +4,7 @@ export default function Experience() {
       title: 'Junior Frontend Developer (Remote)',
       company: 'Neputer Tech',
       year: 'Dec 2025 - Present',
-      projects: 'Medhey',
+      projects: 'Medhey, Kailash Journey, Orrog',
       description: 'Built responsive and user-friendly web interfaces for project-based requirements.'
     },
     {
@@ -39,7 +39,7 @@ export default function Experience() {
           <p className="text-base md:text-lg text-muted-foreground">My professional journey</p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}

@@ -22,11 +22,11 @@ export default function Education() {
           <p className="text-base md:text-lg text-muted-foreground">My academic background</p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {education.map((edu, index) => (
             <div
               key={index}
-              className="group p-6 md:p-8 rounded-xl bg-primary/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 hover:bg-primary/20"
+              className="group p-4 sm:p-6 lg:p-8 rounded-xl bg-primary/10 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 hover:bg-primary/20"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                 <div>

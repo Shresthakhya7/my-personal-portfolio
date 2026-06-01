@@ -82,29 +82,40 @@ export default function Contact() {
 
         {/* Contact Info Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
-            <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
-              <Mail className="text-cyan-400" size={24} />
+          <a href="mailto:shresthakhya7@gmail.com" className="block hover:scale-[1.02] transition-all duration-300">
+            <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 cursor-pointer hover:bg-primary/20 transition">
+              <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
+                <Mail className="text-cyan-400" size={24} />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Email</h3>
+              <p className="text-muted-foreground">shresthakhya7@gmail.com</p>
             </div>
-            <h3 className="text-lg font-bold mb-2">Email</h3>
-            <p className="text-muted-foreground">shresthakhya7@gmail.com</p>
-          </div>
+          </a>
 
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
-            <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
-              <Phone className="text-cyan-400" size={24} />
+          <a href="tel:+9779866316333" className="block hover:scale-[1.02] transition-all duration-300">
+            <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 cursor-pointer hover:bg-primary/20 transition">
+              <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
+                <Phone className="text-cyan-400" size={24} />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Phone</h3>
+              <p className="text-muted-foreground">+977 9866316333</p>
             </div>
-            <h3 className="text-lg font-bold mb-2">Phone</h3>
-            <p className="text-muted-foreground">+977 9866316333</p>
-          </div>
+          </a>
 
-          <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20">
-            <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
-              <MapPin className="text-cyan-400" size={24} />
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Madhyapur+Thimi+Bhaktapur"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover:scale-[1.02] transition-all duration-300"
+          >
+            <div className="p-6 rounded-xl bg-primary/10 border border-cyan-500/20 cursor-pointer hover:bg-primary/20 transition">
+              <div className="w-12 h-12 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center mb-4">
+                <MapPin className="text-cyan-400" size={24} />
+              </div>
+              <h3 className="text-lg font-bold mb-2">Location</h3>
+              <p className="text-muted-foreground">Madhyapur Thimi, Bhaktapur</p>
             </div>
-            <h3 className="text-lg font-bold mb-2">Location</h3>
-            <p className="text-muted-foreground">Madhyapur Thimi, Bhaktapur</p>
-          </div>
+          </a>
         </div>
 
         {/* Contact Form */}

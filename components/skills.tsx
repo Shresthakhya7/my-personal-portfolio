@@ -26,11 +26,11 @@ export default function Skills() {
           <p className="text-base md:text-lg text-muted-foreground">Technologies I'm proficient in</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="p-6 md:p-8 rounded-xl bg-background border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 hover:bg-primary/5"
+              className="p-4 lg:p-6 rounded-xl bg-background border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 hover:bg-primary/5"
             >
               <h3 className="text-xl font-bold text-cyan-400 mb-6">{category.category}</h3>
               <div className="flex flex-wrap gap-3">
